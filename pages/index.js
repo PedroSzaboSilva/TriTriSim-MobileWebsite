@@ -3,15 +3,6 @@ import Head from "next/head";
 export default function Home() {
   return (
     <>
-      <script>
-        {`function ismobile() {
-          return /Android|iPhone|iPad/i.test(navigator.userAgent);}
-          
-          console.log("Is mobile: " + ismobile());
-          if (ismobile()) {
-            window.location.replace("http://m.tritrisim.com");
-          }`}
-      </script>
       <style>
         {`body {
   overflow-x: hidden;
@@ -19,182 +10,6 @@ export default function Home() {
   margin: 0;
   {* background-image: url('https://installer.cdn.tritrisim.com/Images/FenixA319Fire.png');
 }*/}
-
-
-
-.menu-container {
-  position: relative;
-  display: flex;
-  align-items: center;
-  margin-bottom: 0px;
-  background: #000000;
-  color: #cdcdcd;
-  padding:20px;
-  z-index: 1;
-  -webkit-user-select: none;
-  user-select: none;
-  box-sizing: border-box;
-}
-
-.menu-logo {
-  line-height: 0;
-  margin: 0 20px;
-}
-
-.menu-logo img {
-  max-height: 40px;
-  max-width: 100px;
-  flex-shrink: 0;
-}
-
-.menu-container a {
-  text-decoration: none;
-  color: #000000;
-  transition: color 0.3s ease;
-}
-
-.menu-container a:hover {
-  color: #00C6A7;
-}
-
-.menu-container input {
-  display: block;
-  width: 35px;
-  height: 25px;
-  margin: 0;
-  position: absolute;
-  cursor: pointer;
-  opacity: 0; /* hide this */
-  z-index: 2; /* and place it over the hamburger */
-  -webkit-touch-callout: none;
-}
-
-/* Burger menu */
-.menu-container span {
-  display: block;
-  width: 33px;
-  height: 4px;
-  margin-bottom: 5px;
-  position: relative;
-  background: #cdcdcd;
-  border-radius: 3px;
-  z-index: 1;
-  transform-origin: 4px 0px;
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              opacity 0.55s ease;
-}
-
-.menu-container span:first-child {
-  transform-origin: 0% 0%;
-}
-
-.menu-container span:nth-child(3) {
-  transform-origin: 0% 100%;
-}
-
-.menu-container input:checked ~ span {
-  opacity: 1;
-  transform: rotate(45deg) translate(3px,-1px);
-  background: #000000;
-}
-
-.menu-container input:checked ~ span:nth-child(4) {
-  opacity: 0;
-  transform: rotate(0deg) scale(0.2, 0.2);
-}
-
-.menu-container input:checked ~ span:nth-child(3) {
-  transform: rotate(-45deg) translate(-5px,11px);
-}
-
-.menu ul {
-  list-style: none;
-}
-
-.menu li {
-  padding: 10px 0;
-  font-size: 22px;
-}
-
-/* mobile styles */
-@media only screen and (max-width: 767px) { 
-  .menu-container {
-    flex-direction: column;
-    align-items: flex-end;
-  }
-
-  .menu-logo {
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
-  .menu-logo img {
-    max-height: 30px;
-  }
-
-  .menu {
-    position: absolute;
-    box-sizing: border-box;
-    width: 300px;
-    right: -300px;
-    top: 0;
-    margin: -20px;
-    padding: 75px 50px 50px;
-    background: #cdcdcd;
-    -webkit-font-smoothing: antialiased;
-    /* to stop flickering of text in safari */
-    transform-origin: 0% 0%;
-    transform: translateX(0%);
-    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-  }
-
-  .menu-container input:checked ~ .menu {
-    transform: translateX(-100%);
-  }
-}
-
-/* desktop styles */
-@media only screen and (min-width: 768px) { 
-  .menu-container {
-    width: 100%;
-  }
-
-  .menu-container a {
-    color: #cdcdcd;
-  }
-
-  .menu-container input {
-    display: none;
-  }
-
-  /* Burger menu */
-  .menu-container span {
-    display: none;
-  }
-
-  .menu {
-    position: relative;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .menu ul {
-    display: flex;
-    padding: 0;
-  }
-
-  .menu li {
-    padding: 0 20px;
-  }
-
-  body {
-    margin: 0;
-    padding: 0;
-  }
 
 /* body {
   margin: 0;
@@ -206,6 +21,7 @@ export default function Home() {
   min-height: 100vh;
   position: relative;
   z-index: 0;
+  overflow-x: hidden;
 }
 
  body::before {
@@ -231,9 +47,9 @@ html {
       <Head>
         <title>TriTriSim TFX – Emergency Effects for MSFS</title>
         <meta
-            name="description"
-            content="Download fire, crash, and spark effects for Microsoft Flight Simulator. Free for MSFS2020 & 2024. Join our Discord!"
-          />
+          name="description"
+          content="Download fire, crash, and spark effects for Microsoft Flight Simulator. Free for MSFS2020 & 2024. Join our Discord!"
+        />
 
         <link rel="icon" type="image/x-icon" href="/tfx.png" />
 
@@ -269,45 +85,6 @@ html {
         />
       </Head>
 
-      <nav className="menu-container">
-        <input type="checkbox" aria-label="Toggle menu" />
-        <span></span>
-        <span></span>
-        <span></span>
-        <a href="https://tritrisim.com" className="menu-logo">
-          <img
-            src="https://installer.cdn.tritrisim.com/Images/tfx.png"
-            alt="Logo"
-          />
-        </a>
-        <div className="menu">
-          <ul>
-            <li>
-              <a href="#">Home</a>
-            </li>
-            <li>
-              <a href="#about">About</a>
-            </li>
-            <li>
-              <a href="#gallery">Gallery</a>
-            </li>
-            <li>
-              <a href="#requirements">Requirements</a>
-            </li>
-            <li>
-              <a href="#download" target="_blank" rel="noopener noreferrer">
-                Download
-              </a>
-            </li>
-          </ul>
-          <ul>
-            <li>
-              <a href="https://ko-fi.com/tritrithecuber">Donate</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-
       <section
         id="download"
         style={{
@@ -337,37 +114,13 @@ html {
         />
 
         <a
-          href="https://github.com/TriTriTheCuber/TFX/raw/refs/heads/main/TriTriSim%20Installer.exe"
-          style={{
-            marginRight: "10px",
-            fontSize: "2rem",
-            padding: "15px 30px",
-            borderRadius: "12px",
-            maxWidth: "300px",
-            width: "80%",
-            textAlign: "center",
-            backgroundColor: "transparent",
-            border: "2px solid white",
-            color: "white",
-            textDecoration: "none",
-            cursor: "pointer",
-            zIndex: 1,
-            position: "relative",
-          }}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Download
-        </a>
-        <br />
-        <a
           href="https://discord.gg/854qYnA3dm"
           style={{
-            marginRight: "10px",
+            marginLeft: "5x",
             fontSize: "2rem",
-            padding: "15px 30px",
+            padding: "10px 15px",
             borderRadius: "12px",
-            maxWidth: "300px",
+            maxWidth: "200px",
             width: "80%",
             textAlign: "center",
             backgroundColor: "transparent",
@@ -387,7 +140,7 @@ html {
 
       <div
         style={{
-          padding: "5rem", // trocado de margin pra padding
+          padding: "1rem", // trocado de margin pra padding
           fontFamily:
             "Open Sans, system-ui, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, Helvetica, Arial, Noto Sans, Segoe UI, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji",
         }}
@@ -399,6 +152,7 @@ html {
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
+            flexDirection: "column",
             backgroundColor: "white",
             borderRadius: "10px",
             boxShadow: "0 0 20px rgba(0,0,0,0.1)",
@@ -436,13 +190,13 @@ html {
               a wide range of aircraft.
             </p>
           </div>
-
-          <div className="image" style={{ marginLeft: "2rem" }}>
+          <br />
+          <div className="image" style={{}}>
             <img
               src="https://installer.cdn.tritrisim.com/Images/777-3fire.png"
-              width="600rem"
               style={{
                 borderRadius: "10px",
+                maxWidth: "30vh",
               }}
             ></img>
           </div>
@@ -454,22 +208,13 @@ html {
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
+            flexDirection: "column",
             backgroundColor: "white",
             borderRadius: "10px",
             boxShadow: "0 0 20px rgba(0,0,0,0.1)",
             padding: "2rem",
           }}
         >
-          <div className="image" style={{ marginRight: "2rem" }}>
-            <img
-              src="https://installer.cdn.tritrisim.com/Images/b777ffire.png"
-              width="600rem"
-              style={{
-                borderRadius: "10px",
-              }}
-            ></img>
-          </div>
-
           <div className="texts" style={{ fontSize: "100%" }}>
             <h2
               style={{
@@ -501,7 +246,18 @@ html {
               constantly being updated with new effects and aircrafts.
             </p>
           </div>
+          <div className="image" style={{}}>
+            <img
+              src="https://installer.cdn.tritrisim.com/Images/b777ffire.png"
+              width="600rem"
+              style={{
+                borderRadius: "10px",
+                maxWidth: "30vh",
+              }}
+            ></img>
+          </div>
         </div>
+
         <br />
         <div
           className="card"
@@ -509,6 +265,7 @@ html {
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
+            flexDirection: "column",
             backgroundColor: "white",
             borderRadius: "10px",
             boxShadow: "0 0 20px rgba(0,0,0,0.1)",
@@ -552,12 +309,12 @@ html {
             </p>
           </div>
 
-          <div className="image" style={{ marginLeft: "2rem" }}>
+          <div className="image" style={{}}>
             <img
               src="https://installer.cdn.tritrisim.com/Images/737fire.png"
-              width="600rem"
               style={{
                 borderRadius: "10px",
+                maxWidth: "30vh",
               }}
             ></img>
           </div>
@@ -660,8 +417,8 @@ html {
       <div
         id="gallery"
         style={{
-          padding: "3rem 2rem",
           backgroundColor: "#ffffff",
+          padding: "2rem 1rem",
         }}
       >
         <h2
@@ -678,14 +435,15 @@ html {
           Gallery
         </h2>
         <div
+          className="gallery-grid"
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(3, 1fr)",
-            gap: "1.5rem",
+            gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+            gap: "1rem",
             justifyItems: "center",
-            maxWidth: "1300px",
+            width: "100%",
+            maxWidth: "1200px",
             margin: "0 auto",
-            padding: "0 1rem",
           }}
         >
           {[
@@ -710,7 +468,7 @@ html {
                 aspectRatio: "16 / 9",
                 overflow: "hidden",
                 borderRadius: "10px",
-                boxShadow: "0 0 15px rgba(0,0,0,0.05)",
+                boxShadow: "0 0 15px rgba(0,0,0,0.1)",
                 display: "block",
                 transition: "transform 0.3s ease",
               }}
