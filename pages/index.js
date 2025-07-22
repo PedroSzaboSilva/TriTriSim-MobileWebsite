@@ -93,7 +93,7 @@ html {
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
-          height: "90vh",
+          height: "100vh",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
@@ -116,7 +116,6 @@ html {
         <a
           href="https://discord.gg/854qYnA3dm"
           style={{
-            marginLeft: "5x",
             fontSize: "2rem",
             padding: "10px 15px",
             borderRadius: "12px",
@@ -162,7 +161,7 @@ html {
           <div className="texts" style={{ fontSize: "100%" }}>
             <h2
               style={{
-                fontSize: "1.875rem",
+                fontSize: "1.5rem",
                 lineHeight: "2.25rem",
                 fontWeight: "800",
                 marginBlockStart: "0.83em",
@@ -178,8 +177,8 @@ html {
               style={{
                 fontFamily:
                   "Open Sans, system-ui, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, Helvetica, Arial, Noto Sans, Segoe UI, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji",
-                fontSize: "1.125rem",
-                lineHeight: "1.75rem",
+                fontSize: "1.0rem",
+                lineHeight: "1.6rem",
                 color: "rgb(107 114 128)",
               }}
             >
@@ -190,13 +189,12 @@ html {
               a wide range of aircraft.
             </p>
           </div>
-          <br />
           <div className="image" style={{}}>
             <img
               src="https://installer.cdn.tritrisim.com/Images/777-3fire.png"
               style={{
                 borderRadius: "10px",
-                maxWidth: "30vh",
+                maxWidth: "35vh",
               }}
             ></img>
           </div>
@@ -218,7 +216,7 @@ html {
           <div className="texts" style={{ fontSize: "100%" }}>
             <h2
               style={{
-                fontSize: "1.875rem",
+                fontSize: "1.5rem",
                 lineHeight: "2.25rem",
                 fontWeight: "800",
                 marginBlockStart: "0.83em",
@@ -234,8 +232,8 @@ html {
               style={{
                 fontFamily:
                   "Open Sans, system-ui, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, Helvetica, Arial, Noto Sans, Segoe UI, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji",
-                fontSize: "1.125rem",
-                lineHeight: "1.75rem",
+                fontSize: "1.0rem",
+                lineHeight: "1.6rem",
                 color: "rgb(107 114 128)",
               }}
             >
@@ -252,7 +250,7 @@ html {
               width="600rem"
               style={{
                 borderRadius: "10px",
-                maxWidth: "30vh",
+                maxWidth: "35vh",
               }}
             ></img>
           </div>
@@ -275,7 +273,7 @@ html {
           <div className="texts" style={{ fontSize: "100%" }}>
             <h2
               style={{
-                fontSize: "1.875rem",
+                fontSize: "1.5rem",
                 lineHeight: "2.25rem",
                 fontWeight: "800",
                 marginBlockStart: "0.83em",
@@ -291,8 +289,9 @@ html {
               style={{
                 fontFamily:
                   "Open Sans, system-ui, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, Helvetica, Arial, Noto Sans, Segoe UI, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji",
-                fontSize: "1.125rem",
-                lineHeight: "1.75rem",
+                fontSize: "1.0rem",
+                lineHeight: "1.6rem",
+
                 color: "rgb(107 114 128)",
               }}
             >
@@ -314,7 +313,7 @@ html {
               src="https://installer.cdn.tritrisim.com/Images/737fire.png"
               style={{
                 borderRadius: "10px",
-                maxWidth: "30vh",
+                maxWidth: "35vh",
               }}
             ></img>
           </div>
@@ -332,7 +331,7 @@ html {
       >
         <h2
           style={{
-            fontSize: "2rem",
+            fontSize: "1.7rem",
             fontWeight: "800",
             marginBottom: "2rem",
             color: "#111827",
@@ -347,7 +346,7 @@ html {
             display: "flex",
             flexWrap: "wrap",
             justifyContent: "center",
-            gap: "2rem",
+            gap: "1rem",
             maxWidth: "1000px",
             margin: "0 auto",
           }}
@@ -377,7 +376,7 @@ html {
               <li>Processor: Intel i5-4460 | AMD Ryzen 3 1200</li>
               <li>Memory: 8 GB RAM</li>
               <li>Graphics: NVIDIA GTX 770 | AMD Radeon RX 570</li>
-              <li>DirectX: Version 11</li>
+              <li>DirectX: Version 11 or 12</li>
               <li>Storage: 1.6 GB available space</li>
             </ul>
           </div>
@@ -402,12 +401,12 @@ html {
               Recommended
             </h3>
             <ul style={{ lineHeight: "1.8", color: "#4B5563" }}>
-              <li>Requires a 64-bit processor and OS</li>
+              <li>64-bit processor and OS</li>
               <li>OS: Windows 10</li>
               <li>Processor: Intel i5-8400 | AMD Ryzen 5 1500X</li>
               <li>Memory: 16 GB RAM</li>
               <li>Graphics: NVIDIA GTX 970 | AMD Radeon RX 590</li>
-              <li>DirectX: Version 11</li>
+              <li>DirectX: Version 12</li>
               <li>Storage: 2 GB available space</li>
             </ul>
           </div>
