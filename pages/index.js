@@ -100,6 +100,133 @@ html {
           position: "relative",
         }}
       >
+{/*Start of hamburger*/}
+        <div>
+            <style>{`
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f4f4f4;
+    }
+
+    /* Hamburger Icon */
+    .hamburger {
+      width: 30px;
+      height: 25px;
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      cursor: pointer;
+      z-index: 1001;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .hamburger span {
+      background-color: #333;
+      height: 4px;
+      width: 100%;
+      border-radius: 2px;
+      transition: all 0.4s ease;
+    }
+
+    /* Transform into "X" */
+    .hamburger.open span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger.open span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.open span:nth-child(3) {
+      transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    /* Slide Menu */
+    .menu {
+      height: 100vh;
+      width: 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      transition: width 0.4s ease;
+      padding-top: 60px;
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .menu.open {
+      width: 250px;
+    }
+
+    .menu a {
+      padding: 12px 24px;
+      text-decoration: none;
+      font-size: 18px;
+      color: white;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .menu a:hover {
+      background-color: #575757;
+    }
+
+    .content {
+      padding: 20px;
+    }
+
+    @media (max-width: 600px) {
+      .menu a {
+        font-size: 20px;
+      }
+
+      .hamburger {
+        top: 15px;
+        left: 15px;
+      }
+
+      .menu.open {
+        width: 100%;
+      }
+    }
+  `}
+  </style>
+
+<div class="hamburger" id="hamburger" onclick="toggleMenu()">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+<br></br>
+
+
+<div id="menu" class="menu">
+  <a href="#">Home</a>
+  <a href="#about">About</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#requirements">Requirements</a>
+</div>
+
+
+<script>{`
+  function toggleMenu() {
+    document.getElementById("menu").classList.toggle("open");
+    document.getElementById("hamburger").classList.toggle("open");
+  }
+`}
+</script>
+        </div>
+{/*End of hamburger*/}
         <div
           style={{
             position: "absolute",
