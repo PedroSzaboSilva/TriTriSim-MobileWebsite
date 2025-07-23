@@ -100,6 +100,7 @@ html {
           position: "relative",
         }}
       >
+{/*Start of hamburger*/}
         <div>
             <style>{`
     * {
@@ -225,6 +226,7 @@ html {
 `}
 </script>
         </div>
+{/*End of hamburger*/}
         <div
           style={{
             position: "absolute",
