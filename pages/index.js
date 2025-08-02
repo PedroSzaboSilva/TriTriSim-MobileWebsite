@@ -631,9 +631,10 @@ html {
           marginTop: "2rem",
         }}
       >
-        TriTriSim 2025.
+        TriTriSim 2025
       </footer>
     </>
   );
 }
+
 
